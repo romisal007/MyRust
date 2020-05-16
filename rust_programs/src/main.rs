@@ -1,6 +1,11 @@
+mod guess_numbers;
+mod foo;
+
+use guess_numbers::Guess;
+use foo::Bar;
 fn main() {
     println!("Hello, world!");
-    let x=10;
-    println!("{}",x );
-    
+        
+   Guess::do_guess();
+   Bar::do_bar();
 }
