@@ -1,2 +1,2 @@
 # MyRust
-Rust testing the basics rust Programs
+The  basics rust Programs
