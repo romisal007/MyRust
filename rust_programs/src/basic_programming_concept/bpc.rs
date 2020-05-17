@@ -70,7 +70,7 @@ fn do_temerature_convrsion(){
     let mut  opt=String ::new();
     io::stdin().read_line(&mut opt).expect("failed to read line");
 
-   let  opt :u32=  opt.trim().parse().expect("failed to parse");
+   let  opt :u32=  opt.trim().parse().expect("failed to parse Please enter valid oprion");
 
     if opt==1{
         do_fahrneite_to_celeious();
