@@ -7,5 +7,6 @@ fn main() {
     println!("Hello, world!");
         
    Guess::do_guess();
-   Bar::do_bar();
+  // Bar::do_bar();
+  
 }
