@@ -1,11 +1,12 @@
 mod guess_numbers;
-mod foo;
+//mod foo;
 
 use guess_numbers::Guess;
-use foo::Bar;
+//use foo::Bar;
 fn main() {
     println!("Hello, world!");
         
    Guess::do_guess();
-   Bar::do_bar();
+  // Bar::do_bar();
+  
 }
