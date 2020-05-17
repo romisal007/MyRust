@@ -9,7 +9,7 @@ impl Guess{
         println!("Guess the NUmber !" );
        
         let secrete_number=rand::thread_rng().gen_range(1,101);
-        println!("Your Secrete number is {}",secrete_number);
+      //  println!("Your Secrete number is {}",secrete_number);
         loop {
             println!("PLease enter the your guess no : ");
             let mut guess=String::new();
