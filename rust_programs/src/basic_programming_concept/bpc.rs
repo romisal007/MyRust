@@ -1,3 +1,4 @@
+use std::io;
 pub struct BPC;
 
 impl BPC {
@@ -6,6 +7,8 @@ impl BPC {
         let add = another_function(5);
         println!("additon of on number and next number is :{}", add);
         control_flow();
+
+        do_temerature_convrsion();
     }
 }
 
@@ -55,4 +58,70 @@ fn control_flow() {
 
 
 
+}
+
+fn do_temerature_convrsion(){
+
+    println!("Choose Operation ");
+
+    println!("Press 1 to convert Fahrnite to celsius");
+    println!("Press 2 to convert celsius to fahrnite");
+
+    let mut  opt=String ::new();
+    io::stdin().read_line(&mut opt).expect("failed to read line");
+
+   let  opt :u32=  opt.trim().parse().expect("failed to parse");
+
+    if opt==1{
+        do_fahrneite_to_celeious();
+    }
+    else if opt==2{
+        do_celcious_to_fahrneite();
+    }
+    else {
+        println!("pLease enter valid option");
+    }
+
+}
+fn do_fahrneite_to_celeious(){
+
+ loop {
+     
+ let mut temp_in_f = String :: new();
+ 
+ println!("Please enter temp in F : " );
+    io::stdin().read_line(&mut temp_in_f)
+    .expect("failed to read line");
+
+  let degree_f:f32 = match temp_in_f.trim().parse(){
+      Ok(degree_f)=>degree_f,
+      Err(_)=>continue,
+  };
+  
+  let degree_temp:f32= (degree_f - 32.0)*(5.0/9.0);
+  println!("temp of fahrneite {} in degree celcious is {}",temp_in_f,degree_temp );
+  break;
+ }
+
+   
+
+}
+
+fn do_celcious_to_fahrneite(){
+
+    loop {
+        let mut temp_in_c=String::new();
+        println!("Please enter the temperature in C :" );
+    
+        io::stdin().read_line(& mut temp_in_c).expect("failed to read line");
+        let degree_c:f32=match temp_in_c.trim().parse(){
+            Ok(degree_c)=>degree_c,
+            Err(_)=>continue,
+        };
+    
+        let degree_in_f:f32=(degree_c*9.0/5.0) + 32.0;
+        println!("Temperature of celsius {} in fahrnite is {}",temp_in_c,degree_in_f );
+        break;
+    }
+  
 }
